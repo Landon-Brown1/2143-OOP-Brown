@@ -1,18 +1,18 @@
  /***************************************************************************                   
- * Author:           LANDON BROWN						                                     *
- * Email:            LANDONBROWN.COLLEGE@GMAIL.COM			                       *
- * Label:            ASSIGNMENT 02   					                                  *
- * Title:            COMMENTING C++ CODE 					                              *
- * Course:           2143-OBJECT-ORIENTED-PROGRAMMING			                    *
- * Semester:         SPRING 2020						                                      *
- *									                                                                 *
- * Description:								                                                     *
- *       refresh on good comments in code 				                              *
- *									                                                                 *
- * Usage:								                                                           *
- *        N/A                               				                            *
- *									                                                                 *
- * Files:            main.cpp	                                              *
+ * Author:           LANDON BROWN						                    *
+ * Email:            LANDONBROWN.COLLEGE@GMAIL.COM			                *
+ * Label:            ASSIGNMENT 02   					                    *
+ * Title:            COMMENTING C++ CODE 					                *
+ * Course:           2143-OBJECT-ORIENTED-PROGRAMMING			            *
+ * Semester:         SPRING 2020						                    *
+ *									                                        *
+ * Description:								                                *
+ *       refresh on good comments in code 				                    *
+ *									                                        *
+ * Usage:								                                    *
+ *        N/A                               				                *
+ *									                                        *
+ * Files:            main.cpp	                                            *
  ***************************************************************************/
 
 
