@@ -8,7 +8,7 @@
 
 > This is your definition of what a class is. Using images is A-ok. For example: 
 >
->![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Class")
+><![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Class.png "Class") width=400>
 
 #### Class Variable
 > This is your object definition....
