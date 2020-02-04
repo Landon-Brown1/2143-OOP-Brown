@@ -13,7 +13,7 @@
 #### Class Variable
 > This is your object definition....
 >
->![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Object.png "Object")
+>![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Class_Variable.png "Class_Variable")
 
 #### Object
 > This is your object definition....
@@ -23,7 +23,7 @@
 #### Method
 > This is your method defintion.....
 >
->![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Object.png "Object")
+>![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Method.png "Method")
 
 #### Abstraction
 > This is your object definition....
