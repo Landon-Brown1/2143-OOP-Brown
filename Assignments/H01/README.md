@@ -28,17 +28,16 @@
 #### Abstraction
 > This is your object definition....
 >
->![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Object.png "Object")
+>![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Tired.png "ugh")
+
 
 #### Attributes / Properties
 > This is your object definition....
 >
->![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Object.png "Object")
 
 #### Composition
 > This is your object definition....
 >
->![alt text](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Object.png "Object")
 
 #### Encapsulation
 > This is your object definition....
