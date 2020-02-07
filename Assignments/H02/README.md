@@ -8,4 +8,4 @@
 | Card          | [Card](https://github.com/Landon-Brown1/2143-OOP-Brown/tree/master/Assignments/H02/Card "card class")    |Card attributes (non-static) |
 | 02            | [folder](link "classname")    | ass |
 
-![Diagram](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Class.png "game structure diagram")
+![Diagram](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H02/Diagram.png "game structure diagram")
