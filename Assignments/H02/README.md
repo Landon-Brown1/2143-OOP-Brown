@@ -5,6 +5,7 @@
 | Player        | [Player](https://github.com/Landon-Brown1/2143-OOP-Brown/tree/master/Assignments/H02/Player "player class")    |Player attribute class |
 | Hand          | [Hand](https://github.com/Landon-Brown1/2143-OOP-Brown/tree/master/Assignments/H02/Hand "hand class")    |Player hand attributes |
 | Deck          | [Deck](https://github.com/Landon-Brown1/2143-OOP-Brown/tree/master/Assignments/H02/Deck "deck class")    |Deck traits and sizes |
-| Card          | [Card](https://github.com/Landon-Brown1/2143-OOP-Brown/tree/master/Assignments/H02/Card "card class")    |Card attributes (static) |
-
+| Card          | [Card](https://github.com/Landon-Brown1/2143-OOP-Brown/tree/master/Assignments/H02/Card "card class")    |Card attributes (non-static) |
 | 02            | [folder](link "classname")    | ass |
+
+![Diagram](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H01/Images/Class.png "game structure diagram")
