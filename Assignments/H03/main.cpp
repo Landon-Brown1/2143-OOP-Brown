@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
-// Author:           Terry Griffin
+// Author:           Terry Griffin (edited by: Landon M Brown)
 // Email:            terry.griffin@msutexas.edu
 // Course:           CMPS 2143
 // Semester:         Spring 2020
-// Date:             Jan 28th
+// Date:             Feb 10, 2020
 //
 // Description:
 //    This code adds some improvements to our vector class written in the
@@ -59,7 +59,7 @@ struct Node {
 
   // This overloads the Greater Than (>) operator allowing
   // us to compare one value to another and tell if it is more
-  void operator>(const Node& obj) { 
+  bool operator>(const Node& obj) { 
     if(this->data > obj.data){
         return true;
     }else{
@@ -69,7 +69,7 @@ struct Node {
 
   // This overloads the Equivalency (==) operator allowing
   // us to compare one value to another and tell if it is equal
-  void operator==(const Node& obj) { 
+  bool operator==(const Node& obj) { 
     if(this->data == obj.data){
         return true;
     }else{
@@ -79,7 +79,7 @@ struct Node {
 
   // This overloads the Negation (!=) operator allowing
   // us to compare one value to another and tell if it is not equal
-  void operator!=(const Node& obj) { 
+  bool operator!=(const Node& obj) { 
     if(this->data != obj.data){
         return true;
     }else{
@@ -266,39 +266,38 @@ class MyVector {
 
     return V;
   }
-
+  // FUNCTION NOW SORTS BY COMPARING NODES DIRECTLY
   // The sort will still work??
   // It should as long as the "T" values are defined
   // to use comparison operators (we will discuss later).
   // For now types like float,string,int will all work.
   void Sort(bool asc = true) {
     Node<T>* Start = Head;
+    Node<T>* minp = Start;
+    T minv = Start->data;
+    Node<T>* mint = Start;
 
     while (Start) {
-      Node<T>* minp = Start;
-      int minv = Start->data;
-      Node<T>* mint = Start;
-      bool doSwap = 0;
-
       while (mint) {
         if (asc) {
-          doSwap = (mint->data < minv);
+          if(*mint < *minp)
+              minp = mint;
         } else {
-          doSwap = (mint->data > minv);
-        }
-
-        if (doSwap) {
-          minp = mint;
-          minv = mint->data;
+          if(*mint > *minp)
+              minp = mint;
         }
         mint = mint->next;
       }
 
       // swap
+      minv = minp->data;
       minp->data = Start->data;
       Start->data = minv;
-
       Start = Start->next;
+      minp = Start;
+      mint = Start;
+      if(Start)
+          minv = Start->data;
     }
   }
 };
@@ -342,6 +341,16 @@ int main() {
 
   cout << V2 << endl;
   cout << V3 << endl;
+
+//testing my sort functions/
+  V2.Sort();
+    //ascending
+  cout << V2 << endl;
+
+  V2.Sort(false);
+    //descending
+  cout << V2 << endl;
+////////////////////////////
 
   MyVector<string> V4;
   MyVector<string> V5;
