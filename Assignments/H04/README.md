@@ -49,3 +49,4 @@
 >
 >![pot](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H04/Images/Pot.jpg "pot")
 >
+>*^Winnings here should be an integer, assuming we are just calculating dollars won; could be different depending on bets. i.e. Cars, house, firstborn, etc...^*
