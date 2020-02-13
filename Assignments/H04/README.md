@@ -4,7 +4,7 @@
 >
 ### Poker Game
 >
->![Poker Game](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H04/Images/Poker.jpg "Poker Game")
+>![Poker Game](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H04/Images/PokerGame.jpg "Poker Game")
 >
 ### Player
 >
