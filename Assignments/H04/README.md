@@ -1,3 +1,3 @@
 ### WHOLE THING
 
-<img src= "https://www.dropbox.com/home/Apps/drawio?preview=Untitled+Diagram.jpg" width="400">
+<img src= "https://previews.dropbox.com/p/thumb/AAtsAtldHTCCgmfQusUJZVkhtEJv1LvCOyH9P1v1KSzLWe0aLgpnCGiKE972g7fI4X0XDvWQlfgZKW0TcA3ms1-P-2FP688OlhARWKklKq8KoNYgWTlwEG_39eQ4PNeZri5PvzKlCm4FGkJXfK9LpsG_B4FVTTDs5QFnJGDrzp0GSTSakHG0wTq5eFJlTEI0GnQz59o32_9RzIl75z1HYmfX1lumneInF5vo5CTtm1zFdmhXGY2VTn283X5HBQ6b4jeeyRm7wHQoudAsHr-8hJ7O2V8O5r6MNtJfk0zsA42DOXOwU2eK0OfwLycesc8NfGEIDH9tQlpxvmzg22zR4GIlmcPRzqdZmCpxbiV2CE5h0XjUoDgx3bN5AqVjb0J1YoCRbYBEnkqshjrJfIYEaWwU/p.jpeg?fv_content=true&size_mode=5" width="400">
