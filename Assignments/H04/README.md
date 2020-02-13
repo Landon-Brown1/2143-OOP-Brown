@@ -1,5 +1,5 @@
 # Poker Game Class Diagram - Landon M Brown
-** This is a small diagram of what our poker class should _about_ look like**
+**This is a small diagram of what our poker class should _about_ look like**
 ### Class Diagram
 >
 >![Poker Class](https://github.com/Landon-Brown1/2143-OOP-Brown/blob/master/Assignments/H04/Images/Poker.jpg "Poker Class")
