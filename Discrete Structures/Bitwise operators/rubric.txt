@@ -1,0 +1,36 @@
+Programming Assignment 1 NAME _____________________________
+Turned in Feb 19, 2020 at 11am: on Time ______________ __________/ 100 points
+
+Turned in:
+ Printout of .cpp file for program 1
+ Printout of input files (2)
+ Printout of output files (2)
+
+Solution:
+ Opens/Closes files
+ Uses EOF loop correctly
+ Prints student name
+ Option A: prints options selected
+ Option B: prints FLAG
+
+User Interface (I/O Formatting):
+ Asked user for name of files
+ Printed heading (name)
+ Labeled input sets
+ Used blank lines and spacing (pretty)
+
+Design/Applied Concepts covered in class:
+ Used bitwise logic
+ Used files
+ Used functions
+
+Readability/Algorithm/Style
+ Good comments
+ Top of the file
+ Prototypes for methods/functions
+ Internal code
+ Good use of blank lines/spacing
+ Good choice of identifiers
+ Good indentation
+ Good choice of control structures (ie
+switches, loops, etc.)
