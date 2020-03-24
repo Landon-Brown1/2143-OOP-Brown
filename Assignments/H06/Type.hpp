@@ -12,20 +12,20 @@ using namespace std;
 
 class Type{
     string name;
-    float effectiveness;
     
 public:
+    Type(){
+        name = "NULL";
+    }
+    Type(string t1){
+        name = t1;
+    }
+
     void setName(string x){
         name = x;
     }
-    void setEffectiveness(float x){
-        effectiveness = x;
-    }
     string getName(){
         return name;
-    }
-    float getEffectiveness(){
-        return effectiveness;
     }
 
 };
