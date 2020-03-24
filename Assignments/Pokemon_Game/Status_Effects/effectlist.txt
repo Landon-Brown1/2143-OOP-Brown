@@ -5,42 +5,32 @@ decreased by 50%. The status remains after battle
 like other major status ailments. Paralysis can 
 be cured with a Parlyz Heal, a Cheri Berry, or a 
 Lum Berry. Electric type Pokémon cannot be 
-paralyzed, nor can Pokémon that have the ability 
-Limber or those behind a Substitute.
+paralyzed, nor can Pokémon behind a Substitute.
 
 Poisoned
 A poisoned Pokémon loses a set amount of HP every 
-turn. If the effect remains after the battle, the 
-Pokémon will lose HP as the Trainer walks 
-(1 HP of damage for every 4 steps), but after 
-Pokémon Black and White there is no longer this 
-effect. It can be cured with an Antidote, a 
-PSNCureBerry, a Pecha Berry, or a Lum Berry. 
-Poison and Steel type Pokémon cannot be poisoned, 
-nor can Pokémon that have the ability Immunity or 
-this behind a Substitute.
+turn. It can be cured with an Antidote, a Pecha 
+Berry, or a Lum Berry. Poison and Steel type 
+Pokémon cannot be poisoned, nor can Pokémon behind 
+a Substitute.
 
 Badly Poisoned
 A badly poisoned Pokémon is damaged every turn, 
 but this damage increases over time. The first 
 turn, the poisoned Pokémon takes 1/16 of the 
 maximum HP in damage. That damage increases by 
-an additional 1/16 of the max HP each turn. 
-After a battle is over, the poisoned Pokémon will 
-take damage (just like regular Poisoning). It can 
-be cured with an Antidote, a PSNCureBerry, or a 
+an additional 1/16 of the max HP each turn. It can 
+be cured with an Antidote, a Lum Berry, or a 
 Pecha Berry. Poison and Steel type Pokémon cannot 
-be poisoned, nor can Pokémon that have the ability 
-Immunity or those behind a Substitute.
+be poisoned, nor can Pokémon behind a Substitute.
 
 Burned
 Burned Pokémon loose 1/8 of their maximum HP at 
 the end of each turn in addition having their 
 Attack stat reduced by 50%.  Burned Pokémon can 
-be healed with Burn Heal, an Ice Berry, a Kuo 
-Berry, or a Rawst Berry. Fire type Pokémon cannot 
-be burned, nor can Pokémon with the ability Water 
-Veil or those behind a Substitute.
+be healed with Burn Heal, a Lum Berry, or a Rawst 
+Berry. Fire type Pokémon cannot be burned, nor can 
+Pokémon behind a Substitute.
 
 Frozen
 A frozen Pokémon cannot attack, but it can thaw 
@@ -49,20 +39,15 @@ out a frozen Pokémon more easily. Moves such as
 Flame Wheel, Flare Blitz and Sacred Fire can be 
 used even if the user is frozen; these moves will
 thaw out the user. Ice type Pokémon cannot be 
-frozen, and neither can Pokémon with the ability 
-Magma Armor. A frozen Pokémon can be healed with 
-Ice Heal, a Burnt Berry, or an Aspear Berry.
+frozen. A frozen Pokémon can be healed with 
+Ice Heal or an Aspear Berry.
 
 Flinch
 A condition where the affected Pokémon is unable 
 to use moves or attack during the turn it is 
 affected. Usually occurs as a possible secondary 
 effect (for moves like Bite). There is no cure 
-other than waiting for the next turn. It will not 
-affect a Pokémon with the ability Inner Focus. 
-The item King's Rock occasionally causes an 
-opponent to flinch when the Pokémon holding it 
-uses an attack move.
+other than waiting for the next turn.
 
 //--------------Exception Statuses--------------//
 
@@ -75,23 +60,18 @@ status effect can be used even if the Pokémon is
 inflicted with another status condition, like 
 Paralysis or Burn. Confusion can be healed by 
 switching out the confused Pokémon. It can also 
-be cured by using a Persim Berry, a Bitter Berry, 
-a Full Heal, or the Yellow Flute. Pokémon with 
-the ability Own Tempo cannot be confused.
+be cured by using a Persim Berry.
 
 Infatuation
 The Pokémon becomes infatuated with the opponent 
 (who must be of an opposing gender) and is under 
 a condition similar to confusion. It can be cured 
-with a Mental Herb or a Red Flute. Pokémon with 
-the ability Oblivious cannot become infatuated. 
-There are two causes of infatuation: Attract and 
-the ability Cute Charm.
+by switching out the infatuated Pokémon. 
+Only the move "Attract" can inflict infatuation.
 
 Leech Seed
 The Pokémon loses 1/16th of his/her HP each turn, 
 and the opponent gains what was lost, essentially 
 having the same affect as a weaker, but continuous, 
-Absorb. Some Grass type Pokémon cannot be 
-re-seeded. Once Seeded, switching, fainting, using 
+Absorb. Once Seeded, switching, fainting, or using 
 such moves as Rapid Spin will remove this.
