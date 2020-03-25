@@ -10,13 +10,12 @@
 
 using namespace std;
 
-const int NUM_TYPES = 2;
-
 class Pokemon{
 
     int dex;                // pokedex #
     string name;            // just the base name
-    Type type[NUM_TYPES];   // either 1 or 2 types
+    Type type1;             // either 1,
+    Type type2;             //      or 2 types
     float weight;           // in lbs
     float height;           // in inches
     char gender;            // only Male for now
@@ -37,9 +36,11 @@ public:
     void setName(string x){
         name = x;
     }
-    void setType(Type x[]){
-        type[0] = x[0];
-        type[1] = x[1];
+    void setType1(Type x){
+        type1 = x;
+    }
+    void setType2(Type x){
+        type2 = x;
     }
     void setWeight(float x){
         weight = x;
@@ -79,28 +80,71 @@ public:
     string getName(){
         return name;
     }
-    Type getType(){
-        return type[NUM_TYPES];
+    Type getType1(){
+        return type1;
     }
-    int getDex(){
-        return dex;
+    Type getType2(){
+        return type2;
     }
-    int getDex(){
-        return dex;
+    float getWeight(){
+        return weight;
     }
-    int getDex(){
-        return dex;
+    float getHeight(){
+        return height;
     }
-    int getDex(){
-        return dex;
+    char getGender(){
+        return gender;
     }
-    int getDex(){
-        return dex;
+    bool getFinalEvolution(){
+        return finalEvolution;
     }
-    int getDex(){
-        return dex;
+    int getHP(){
+        return HP;
+    }
+    int getAttack(){
+        return Attack;
+    }
+    int getDefence(){
+        return Defence;
+    }
+    int getSpAttack(){
+        return SpAttack;
+    }
+    int getSpDefence(){
+        return SpDefence;
     }
 
+    //--------------Constructors---------------//
+    Pokemon(){
+        dex = -1;
+        name = "N/A";
+        type1 = type2 = Type("NULL");
+        weight = height = -1;
+        gender = 'M';
+        finalEvolution = "false";
+        HP = Attack = Defence = 
+        SpAttack = SpDefence = Speed = -1;
+    }
+    //please for the love of god never use this
+    Pokemon(int dx, string nam, Type one, Type two,
+            float wei, float hei, char gen, bool fe,
+            int hp, int at, int def, int spa,
+            int spd, int spe){
+        dex = dx;
+        name = nam;
+        type1 = one;
+        type2 = two;
+        weight = wei;
+        height = hei;
+        gender = gen;
+        finalEvolution = fe;
+        HP = hp;
+        Attack = at;
+        Defence = def;
+        SpAttack = spa;
+        SpDefence = spd;
+        Speed = spe;
+    }
 };
 
 //Individual Pokemon Classes---------------------
@@ -110,10 +154,8 @@ public:
     Bulbasaur(){
         setDex(1);
         setName("Bulbasaur");
-        Type t[NUM_TYPES];
-        t[0].setName("grass");
-        t[1].setName("poison");
-        setType(t);
+        setType1(Type("grass"));
+        setType2(Type("poison"));
         setWeight(15.2);
         setHeight(28);
         setGender('M');
@@ -134,10 +176,8 @@ public:
     Ivysaur(){
         setDex(2);
         setName("Ivysaur");
-        Type t[NUM_TYPES];
-        t[0].setName("grass");
-        t[1].setName("poison");
-        setType(t);
+        setType1(Type("grass"));
+        setType2(Type("poison"));
         setWeight(28.7);
         setHeight(39);
         setGender('M');
@@ -158,10 +198,8 @@ public:
     Venusaur(){
         setDex(3);
         setName("Venusaur");
-        Type t[NUM_TYPES];
-        t[0].setName("grass");
-        t[1].setName("poison");
-        setType(t);
+        setType1(Type("grass"));
+        setType2(Type("poison"));
         setWeight(220.5);
         setHeight(75);
         setGender('M');
@@ -182,10 +220,8 @@ public:
     Charmander(){
         setDex(4);
         setName("Charmander");
-        Type t[NUM_TYPES];
-        t[0].setName("fire");
-        t[1].setName("none");
-        setType(t);
+        setType1(Type("fire"));
+        setType2(Type("none"));
         setWeight(18.7);
         setHeight(24);
         setGender('M');
@@ -206,10 +242,8 @@ public:
     Charmeleon(){
         setDex(5);
         setName("Charmeleon");
-        Type t[NUM_TYPES];
-        t[0].setName("fire");
-        t[1].setName("none");
-        setType(t);
+        setType1(Type("fire"));
+        setType2(Type("none"));
         setWeight(41.9);
         setHeight(43);
         setGender('M');
@@ -230,10 +264,8 @@ public:
     Charizard(){
         setDex(6);
         setName("Charizard");
-        Type t[NUM_TYPES];
-        t[0].setName("fire");
-        t[1].setName("flying");
-        setType(t);
+        setType1(Type("fire"));
+        setType2(Type("flying"));
         setWeight(199.5);
         setHeight(67);
         setGender('M');
@@ -254,10 +286,8 @@ public:
     Squirtle(){
         setDex(7);
         setName("Squirtle");
-        Type t[NUM_TYPES];
-        t[0].setName("water");
-        t[1].setName("none");
-        setType(t);
+        setType1(Type("water"));
+        setType2(Type("none"));
         setWeight(19.8);
         setHeight(20);
         setGender('M');
@@ -278,10 +308,8 @@ public:
     Wartortle(){
         setDex(8);
         setName("Wartortle");
-        Type t[NUM_TYPES];
-        t[0].setName("water");
-        t[1].setName("none");
-        setType(t);
+        setType1(Type("water"));
+        setType2(Type("none"));
         setWeight(49.6);
         setHeight(39);
         setGender('M');
@@ -302,10 +330,8 @@ public:
     Blastoise(){
         setDex(4);
         setName("Blastoise");
-        Type t[NUM_TYPES];
-        t[0].setName("water");
-        t[1].setName("none");
-        setType(t);
+        setType1(Type("water"));
+        setType2(Type("none"));
         setWeight(188.5);
         setHeight(63);
         setGender('M');
