@@ -1,5 +1,5 @@
 | File/Folder       | Description                                                                                               |
-|:-----------------:|:---------------------------------------------------------------------------------------------------------:|
+|:-----------------:|:----------------------------------------------------------------------------------------------------------|
 | Held_Items        | List of all items(that can be held/used by pokemon in battle) that I felt like adding to my game          |
 | Move_List         | List of all moves that the pokemon can use, their statistics, and short descriptions of the effects       |
 | Pokedex           | Only contains Griffin's JSON list of Pokemon. My list is outside this folder and contains more info       |
