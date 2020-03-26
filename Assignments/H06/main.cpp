@@ -6,13 +6,12 @@
 * DATE CREATED: 03/24/2020 
 */
 
-#include <iostream>
-#include <fstream>
-#include "PC.hpp"
+#include "Game.hpp"
 
 int main(){
 
+    Game Pokemon;
+    Pokemon.run();
 
     return 0;
-
 }

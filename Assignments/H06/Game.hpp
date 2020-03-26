@@ -8,16 +8,24 @@
 */
 
 #include <iostream>
-#include <string>
-#include <cmath>
+#include "Battle.hpp"
+#include "Menu.hpp"
 
 using namespace std;
 
 class Game{
     private:
-        
+        Battle b;
+        Menu m;
 
     public:
+        Game(){
+            
+        }
 
+
+        void run(){
+            m.printIntro();
+        }
 
 };

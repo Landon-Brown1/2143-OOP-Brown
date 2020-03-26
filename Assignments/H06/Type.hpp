@@ -24,6 +24,24 @@ public:
         name = t1;
     }
 
+    //copy constructor
+    Type(const Type& t){
+        name = t.name;
+    }
+
+    //overloaded assignment operator
+    Type& operator=(const Type& rhs){
+        if(this != &rhs)
+            name = rhs.name;
+        return *this;
+    }
+
+    // overloaded output operator
+    friend ostream& operator<<(ostream& out, const Type& t){
+        out << t.name;
+        return out;
+    }
+
     //set type name
     void setName(string x){
         name = x;
@@ -32,12 +50,6 @@ public:
     //get type name
     string getName(){
         return name;
-    }
-
-    // overloaded output operator
-    friend ostream& operator<<(ostream& out, const Type& t){
-        out << t.name;
-        return out;
     }
 
 };

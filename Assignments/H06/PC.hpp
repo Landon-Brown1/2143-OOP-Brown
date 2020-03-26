@@ -73,6 +73,7 @@ struct PC{
         return *this;
     }
 
+    //print out a PC's contents
     void print(){
         ofstream outFile;
         outFile.open("duh.txt");

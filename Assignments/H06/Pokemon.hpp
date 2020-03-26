@@ -88,19 +88,19 @@ public:
     // overloaded assignment operator
     Pokemon& operator=(Pokemon& rhs){
         if(this != &rhs){
-            this->dex = rhs.getDex();
-            this->name = rhs.getName();
-            this->type1 = rhs.getType1();
-            this->type2 = rhs.getType2();
-            this->weight = rhs.getWeight();
-            this->height = rhs.getHeight();
-            this->finalEvolution = rhs.getFinalEvolution();
-            this->HP = rhs.getHP();
-            this->Attack = rhs.getAttack();
-            this->Defence = rhs.getDefence();
-            this->SpAttack = rhs.getSpAttack();
-            this->SpDefence = rhs.getSpDefence();
-            this->Speed = rhs.getSpeed();
+            dex = rhs.getDex();
+            name = rhs.getName();
+            type1 = rhs.getType1();
+            type2 = rhs.getType2();
+            weight = rhs.getWeight();
+            height = rhs.getHeight();
+            finalEvolution = rhs.getFinalEvolution();
+            HP = rhs.getHP();
+            Attack = rhs.getAttack();
+            Defence = rhs.getDefence();
+            SpAttack = rhs.getSpAttack();
+            SpDefence = rhs.getSpDefence();
+            Speed = rhs.getSpeed();
         }
         return *this; 
     }
@@ -116,6 +116,7 @@ public:
         return out;
     }
 
+    // remove a pokemon's data
     void PokeDelete(){
         dex = -1;
         name = "N/A";

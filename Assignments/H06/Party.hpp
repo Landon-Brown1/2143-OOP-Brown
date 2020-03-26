@@ -55,9 +55,8 @@ public:
             for(int i = 0; i < rhs.size; i++)
                 addPokemon(rhs.party[i]);
             this->first = rhs.first;
-            return *this;
         }
-        
+        return *this;
     }
     // setters------------------------------------
     void setSize(int x){
@@ -87,11 +86,10 @@ public:
         }
     }
 
-    Pokemon& removePokemon(int position){
+    Pokemon removePokemon(int position){
         Pokemon p;
         if(position <= 6 && position >= 0){
             p = party[position];
-            party[position].PokeDelete();
             size--;
         }
         return p;

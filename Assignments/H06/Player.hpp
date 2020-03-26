@@ -36,8 +36,11 @@ public:
 
     // Overloaded assignment operator
     Player& operator=(Player& rhs){
-        this->name = rhs.name;
-        this->PlayerParty = rhs.PlayerParty;
+        if(this != &rhs){
+            this->name = rhs.name;
+            this->PlayerParty = rhs.PlayerParty;
+        }
+        return *this;
     }
 
     // Set Player Name
