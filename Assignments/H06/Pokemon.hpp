@@ -6,9 +6,6 @@
 * DATE CREATED: 03/14/2020 
 */
 #include "Type.hpp"
-#include <string>
-
-using namespace std;
 
 class Pokemon{
 
@@ -18,7 +15,6 @@ class Pokemon{
     Type type2;             //      or 2 types
     float weight;           // in lbs
     float height;           // in inches
-    char gender;            // only Male for now
     bool finalEvolution;    // bool for Reached Final Evolution
     int HP;                 // base hp
     int Attack;             // base attack
@@ -29,7 +25,108 @@ class Pokemon{
 
 public:
 
-    //setters------------------------------------
+    //--------------Constructors---------------//
+    // Base (empty) constructor
+    Pokemon(){
+        dex = -1;
+        name = "N/A";
+        type1 = type2 = Type("NULL");
+        weight = height = -1;
+        finalEvolution = "false";
+        HP = Attack = Defence = 
+        SpAttack = SpDefence = Speed = -1;
+    }
+
+    // please for the love of god never use this (loaded constructor)
+    Pokemon(int dx, string nam, Type one, Type two,
+            float wei, float hei, bool fe,
+            int hp, int at, int def, int spa,
+            int spd, int spe){
+        dex = dx;
+        name = nam;
+        type1 = one;
+        type2 = two;
+        weight = wei;
+        height = hei;
+        finalEvolution = fe;
+        HP = hp;
+        Attack = at;
+        Defence = def;
+        SpAttack = spa;
+        SpDefence = spd;
+        Speed = spe;
+    }
+
+    // copy constructor
+    Pokemon(const Pokemon& other){
+        dex = other.dex;
+        name = other.name;
+        type1 = other.type1;
+        type2 = other.type2;
+        weight = other.weight;
+        height = other.height;
+        finalEvolution = other.finalEvolution;
+        HP = other.HP;
+        Attack = other.Attack;
+        Defence = other.Defence;
+        SpAttack = other.SpAttack;
+        SpDefence = other.SpDefence;
+        Speed = other.Speed;
+    }
+
+    //Pokemon "destructor"
+    ~Pokemon(){
+        dex = -1;
+        name = "N/A";
+        type1 = type2 = Type("NULL");
+        weight = height = -1;
+        finalEvolution = "false";
+        HP = Attack = Defence = 
+        SpAttack = SpDefence = Speed = -1;
+    }
+
+    // overloaded assignment operator
+    Pokemon& operator=(Pokemon& rhs){
+        if(this != &rhs){
+            this->dex = rhs.getDex();
+            this->name = rhs.getName();
+            this->type1 = rhs.getType1();
+            this->type2 = rhs.getType2();
+            this->weight = rhs.getWeight();
+            this->height = rhs.getHeight();
+            this->finalEvolution = rhs.getFinalEvolution();
+            this->HP = rhs.getHP();
+            this->Attack = rhs.getAttack();
+            this->Defence = rhs.getDefence();
+            this->SpAttack = rhs.getSpAttack();
+            this->SpDefence = rhs.getSpDefence();
+            this->Speed = rhs.getSpeed();
+        }
+        return *this; 
+    }
+
+    // overloaded output operator
+    friend ostream& operator<<(ostream& out, const Pokemon& p){
+        out << p.dex << "->" << p.name << "->" << p.type1 
+            << "->" << p.type2 << "->" << p.weight << "->" 
+            << p.height << "->" << p.finalEvolution << "->" 
+            << p.HP << "->" << p.Attack << "->" << p.Defence 
+            << "->" << p.SpAttack << "->" << p.SpDefence 
+            << "->" << p.Speed << endl << endl;
+        return out;
+    }
+
+    void PokeDelete(){
+        dex = -1;
+        name = "N/A";
+        type1 = type2 = Type("NULL");
+        weight = height = -1;
+        finalEvolution = "false";
+        HP = Attack = Defence = 
+        SpAttack = SpDefence = Speed = -1;
+    }
+
+    // setters------------------------------------
     void setDex(int x){
         dex = x;
     }
@@ -47,9 +144,6 @@ public:
     }
     void setHeight(float x){
         height = x;
-    }
-    void setGender(char x){
-        gender = x;
     }
     void setFinalEvolution(bool x){
         finalEvolution = x;
@@ -73,7 +167,7 @@ public:
         Speed = x;
     }
 
-    //getters------------------------------------
+    // getters------------------------------------
     int getDex(){
         return dex;
     }
@@ -91,9 +185,6 @@ public:
     }
     float getHeight(){
         return height;
-    }
-    char getGender(){
-        return gender;
     }
     bool getFinalEvolution(){
         return finalEvolution;
@@ -113,41 +204,17 @@ public:
     int getSpDefence(){
         return SpDefence;
     }
+    int getSpeed(){
+        return Speed;
+    }
 
-    //--------------Constructors---------------//
-    Pokemon(){
-        dex = -1;
-        name = "N/A";
-        type1 = type2 = Type("NULL");
-        weight = height = -1;
-        gender = 'M';
-        finalEvolution = "false";
-        HP = Attack = Defence = 
-        SpAttack = SpDefence = Speed = -1;
-    }
-    //please for the love of god never use this
-    Pokemon(int dx, string nam, Type one, Type two,
-            float wei, float hei, char gen, bool fe,
-            int hp, int at, int def, int spa,
-            int spd, int spe){
-        dex = dx;
-        name = nam;
-        type1 = one;
-        type2 = two;
-        weight = wei;
-        height = hei;
-        gender = gen;
-        finalEvolution = fe;
-        HP = hp;
-        Attack = at;
-        Defence = def;
-        SpAttack = spa;
-        SpDefence = spd;
-        Speed = spe;
-    }
+
+
+
+
 };
 
-//Individual Pokemon Classes---------------------
+// Individual Pokemon Classes---------------------
 class Bulbasaur:public Pokemon{
     
 public:
@@ -158,7 +225,6 @@ public:
         setType2(Type("poison"));
         setWeight(15.2);
         setHeight(28);
-        setGender('M');
         setFinalEvolution(false);
         setHP(45);
         setAttack(49);
@@ -180,7 +246,6 @@ public:
         setType2(Type("poison"));
         setWeight(28.7);
         setHeight(39);
-        setGender('M');
         setFinalEvolution(false);
         setHP(60);
         setAttack(62);
@@ -202,7 +267,6 @@ public:
         setType2(Type("poison"));
         setWeight(220.5);
         setHeight(75);
-        setGender('M');
         setFinalEvolution(true);
         setHP(80);
         setAttack(82);
@@ -224,7 +288,6 @@ public:
         setType2(Type("none"));
         setWeight(18.7);
         setHeight(24);
-        setGender('M');
         setFinalEvolution(false);
         setHP(39);
         setAttack(52);
@@ -246,7 +309,6 @@ public:
         setType2(Type("none"));
         setWeight(41.9);
         setHeight(43);
-        setGender('M');
         setFinalEvolution(false);
         setHP(58);
         setAttack(64);
@@ -268,7 +330,6 @@ public:
         setType2(Type("flying"));
         setWeight(199.5);
         setHeight(67);
-        setGender('M');
         setFinalEvolution(true);
         setHP(78);
         setAttack(84);
@@ -290,7 +351,6 @@ public:
         setType2(Type("none"));
         setWeight(19.8);
         setHeight(20);
-        setGender('M');
         setFinalEvolution(false);
         setHP(44);
         setAttack(48);
@@ -312,7 +372,6 @@ public:
         setType2(Type("none"));
         setWeight(49.6);
         setHeight(39);
-        setGender('M');
         setFinalEvolution(false);
         setHP(59);
         setAttack(63);
@@ -334,7 +393,6 @@ public:
         setType2(Type("none"));
         setWeight(188.5);
         setHeight(63);
-        setGender('M');
         setFinalEvolution(true);
         setHP(79);
         setAttack(83);

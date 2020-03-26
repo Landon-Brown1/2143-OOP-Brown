@@ -14,18 +14,30 @@ class Type{
     string name;
     
 public:
+    //empty constructor
     Type(){
         name = "NULL";
     }
+
+    //loaded constructor
     Type(string t1){
         name = t1;
     }
 
+    //set type name
     void setName(string x){
         name = x;
     }
+
+    //get type name
     string getName(){
         return name;
+    }
+
+    // overloaded output operator
+    friend ostream& operator<<(ostream& out, const Type& t){
+        out << t.name;
+        return out;
     }
 
 };
