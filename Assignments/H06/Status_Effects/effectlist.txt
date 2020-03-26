@@ -75,3 +75,10 @@ and the opponent gains what was lost, essentially
 having the same affect as a weaker, but continuous, 
 Absorb. Once Seeded, switching, fainting, or using 
 such moves as Rapid Spin will remove this.
+
+Must Recharge
+A condition similar to Flinch. The affected Pokémon 
+is unable to use moves or attack during the turn it 
+is affected. Usually occurs as a result of using a 
+move such as hyper beam. There is no cure 
+other than waiting for the next turn.
