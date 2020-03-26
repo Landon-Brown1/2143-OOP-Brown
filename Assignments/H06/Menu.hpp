@@ -18,7 +18,7 @@ struct Menu{
 
     void printIntro(){
         cout << endl << "     @@----------------------------------------------------@@     " << endl
-                     << "   @@    Welcome to my Pokemon Battle Simulator!             @@   " << endl
+                     << "   @@    Welcome to  Pokemon: Brown Version!                 @@   " << endl
                      << " @@      If you would like to play, please press 'y'.          @@ " << endl
                      << "((                                                              ))" << endl
                      << " @@                                                            @@ " << endl
