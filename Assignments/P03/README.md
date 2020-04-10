@@ -1,5 +1,5 @@
 | Variable | Description | Value | 
-|:-------------------------|
+|:-------------------------:|
 |:---:|
 | Hospital capacity | 5% | 
 | Input fatality rate | 3% |
