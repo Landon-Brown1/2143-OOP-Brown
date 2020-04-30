@@ -42,5 +42,6 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "xstring": "cpp"
-    }
+    },
+    "python.pythonPath": "C:\\Python38\\python.exe"
 }
