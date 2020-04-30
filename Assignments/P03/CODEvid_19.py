@@ -5,7 +5,7 @@ import math
 import sys
 
 # list of colors
-colors = ["blue", "light_blue", "yellow", "orange", "green"]
+colors = ["red", "white", "grey", "orange", "green"]
 
 im_path = "C:/Users/Landon Brown/Desktop/Git Repositories/2143-Object-Oriented-Programming/Resources/11_SIM/images/"
 
@@ -18,12 +18,13 @@ config = {
     "images": {
         "blue": im_path + "pac_blue_30x30.png",
         "light_blue": im_path + "pac_light_blue_30x30.png",
-        "red": im_path + "pac_red_30x30.png",
-        "white": im_path + "pac_white_30x30.png",
+        "red": im_path + "circle_red_30x30.png",
+        "white": im_path + "circle_white_30x30.png",
         "yellow": im_path + "pac_yellow_30x30.png",
         "orange": im_path + "pac_orange_30x30.png",
         "green": im_path + "pac_green_30x30.png",
-        "black": im_path + "pac_black_30x30.png"
+        "black": im_path + "pac_black_30x30.png",
+        "grey": im_path + "circle_grey_30x30.png"
     },
     "game": {
         "width": 750,
