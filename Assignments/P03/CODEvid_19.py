@@ -5,18 +5,19 @@ import math
 import sys
 
 # list of colors
-colors = ["red", "white", "grey", "orange", "green"]
+colors = ["red", "white", "grey", "blue", "pink"]
+states = ["susceptible", "infected", "recovered"]
 
-im_path = "C:/Users/Landon Brown/Desktop/Git Repositories/2143-Object-Oriented-Programming/Resources/11_SIM/images/"
+im_path = "C:/Users/Landon Brown/Desktop/Git Repositories/2143-OOP-Brown/Assignments/P03/images/"
 
 config = {
     "sprite": {
-        "width": 10,
-        "height": 10,
-        "speed": 2,
+        "width": 15,
+        "height": 15,
+        "speed": 1,
     },
     "images": {
-        "blue": im_path + "pac_blue_30x30.png",
+        "blue": im_path + "circle_blue_30x30.png",
         "light_blue": im_path + "pac_light_blue_30x30.png",
         "red": im_path + "circle_red_30x30.png",
         "white": im_path + "circle_white_30x30.png",
@@ -24,7 +25,8 @@ config = {
         "orange": im_path + "pac_orange_30x30.png",
         "green": im_path + "pac_green_30x30.png",
         "black": im_path + "pac_black_30x30.png",
-        "grey": im_path + "circle_grey_30x30.png"
+        "grey": im_path + "circle_grey_30x30.png",
+        "pink": im_path + "circle_pink_30x30.png"
     },
     "game": {
         "width": 750,
@@ -38,7 +40,7 @@ config = {
         "social_distance": 20,
         "infection_radius": 10,
         "infection_rate": .20,
-        "population_count": 15,
+        "population_count": 50,
         "pid": 1,
     }
 }
@@ -60,8 +62,9 @@ class Person(pygame.sprite.Sprite):
         self.speed = kwargs.get("speed", 1)
         self.coord = kwargs.get("coord", None)
         self.color = kwargs.get("color", "green")
+        self.state = kwargs.get("susceptible")
 
-        print(self.coord)
+        # print(self.coord)
 
         # choose sprite direction
         self.dx = 0
@@ -176,6 +179,7 @@ class Community(SimStats):
 class Simulation:
     def __init__(self, **kwargs):
         self.population = []
+        self.infected = []
         self.game_width = kwargs.get("width", 500)
         self.game_height = kwargs.get("height", 500)
         self.population_count = kwargs.get("population_count", 10)
@@ -195,21 +199,30 @@ class Simulation:
             self.addPerson()
 
     def addPerson(self, **kwargs):
-        color = kwargs.get("color", random.choice(colors))
         width = kwargs.get("width", config["sprite"]["width"])
         height = kwargs.get("height", config["sprite"]["height"])
         speed = kwargs.get("speed", config["sprite"]["speed"])
-
+        state = kwargs.get("state", random.choice(states))
+        if state == "infected":
+            color = kwargs.get("color", "red")
+        elif state == "susceptible":
+            color = kwargs.get("color", "white")
+        elif state == "recovered":
+            color = kwargs.get("color", "blue")
+        else: color = kwargs.get("color", random.choice(colors))
+            
         x = random.randint(0, self.game_width)
         y = random.randint(0, self.game_height)
         coord = kwargs.get("coord", [x, y])
 
-        p = Person(color=random.choice(colors),
+        p = Person(color=color,
                    width=config["sprite"]["width"],
                    height=config["sprite"]["height"],
                    speed=config["sprite"]["speed"],
                    coord=coord)
+                #    state=state?
         self.population.append(p)
+            
         self.sprite_group.add(p)
 
     def simRun(self):
@@ -280,6 +293,10 @@ if __name__ == '__main__':
     # Run until the user asks to quit
     running = True
 
+    for person in sim.population:
+            print(person.state)
+
+
     #___ GAME LOOP ____________________________________________________________
     while running:
         # Fill the background with blackish
@@ -288,7 +305,9 @@ if __name__ == '__main__':
         
         # create a text suface object, 
         # on which text is drawn on it. 
-        text = font.render('There are ' + str(len(sim.population)) + ' People', True, white, grey) 
+
+        
+        text = font.render('There are ' + str(len(sim.population)) + " Susceptible, " + str(len(sim.population)) + ' Infected, ' + str(len(sim.population)) + ' Recovered, and ' + str(len(sim.population)) + ' Total', True, white, grey) 
         
         # create a rectangular object for the 
         # text surface object 
@@ -313,7 +332,15 @@ if __name__ == '__main__':
                 if event.button == 1:
                     pos = pygame.mouse.get_pos()
 
-                    sim.addPerson(coord=pos)
+                    sim.addPerson(coord=pos,state="susceptible")
+                elif event.button == 3:
+                    pos = pygame.mouse.get_pos()
+
+                    sim.addPerson(coord=pos,state="infected")
+                elif event.button == 6:
+                    pos = pygame.mouse.get_pos()
+
+                    sim.addPerson(coord=pos,state="recovered")
 
         #___CONTROL SIMULATION HERE_____________________________________________________________
 
