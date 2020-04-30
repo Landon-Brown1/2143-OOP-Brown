@@ -329,15 +329,15 @@ if __name__ == '__main__':
 
             # handle MOUSEBUTTONUP
             if event.type == pygame.MOUSEBUTTONUP:
-                if event.button == 1:
-                    pos = pygame.mouse.get_pos()
+                if event.button == 1:               # LeftMB
+                    pos = pygame.mouse.get_pos()    
 
                     sim.addPerson(coord=pos,state="susceptible")
-                elif event.button == 3:
+                elif event.button == 3:             # RightMB
                     pos = pygame.mouse.get_pos()
 
                     sim.addPerson(coord=pos,state="infected")
-                elif event.button == 6:
+                elif event.button == 2:             # MiddleMB
                     pos = pygame.mouse.get_pos()
 
                     sim.addPerson(coord=pos,state="recovered")
