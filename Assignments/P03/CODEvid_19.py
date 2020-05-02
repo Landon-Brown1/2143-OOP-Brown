@@ -12,15 +12,15 @@ im_path = "C:/Users/Landon Brown/Desktop/Git Repositories/2143-OOP-Brown/Assignm
 
 config = {
     "sprite": {
-        "width": 15,
-        "height": 15,
-        "speed": 1,
+        "width": 30,
+        "height": 30,
+        "speed": 1.5,
     },
     "images": {
-        "blue": im_path + "circle_blue_30x30.png",
+        "blue": im_path + "person_blue_30x30.png",
         "light_blue": im_path + "pac_light_blue_30x30.png",
-        "red": im_path + "circle_red_30x30.png",
-        "white": im_path + "circle_white_30x30.png",
+        "red": im_path + "person_red_30x30.png",
+        "white": im_path + "person_white_30x30.png",
         "yellow": im_path + "pac_yellow_30x30.png",
         "orange": im_path + "pac_orange_30x30.png",
         "green": im_path + "pac_green_30x30.png",
@@ -29,8 +29,8 @@ config = {
         "pink": im_path + "circle_pink_30x30.png"
     },
     "game": {
-        "width": 750,
-        "height": 750,
+        "width": 1600,
+        "height": 900,
         "day": 0,
         "fps": 40,
         "loop_count": 0
@@ -40,7 +40,7 @@ config = {
         "social_distance": 20,
         "infection_radius": 10,
         "infection_rate": .20,
-        "population_count": 50,
+        "population_count": 75,
         "pid": 1,
     }
 }
@@ -145,14 +145,25 @@ class Person(pygame.sprite.Sprite):
                 sides_contacted["top"] = True
                 self.rect.y += abs(self.rect.y - other.rect.y) // 2
 
-            # self.rect.x += (self.rect.x-other.rect.x)
-            # self.rect.y += (self.rect.y-other.rect.y)
-
             self.changeDirection(sides_contacted)
 
             return True
 
         return False
+
+    def checkInfect(self,other):
+        if checkCollide():
+            if other.state == "infected":
+                if self.state == "susceptible":
+                    self.color = "red"
+                    self.state = "infected"
+                elif self.state == "recovered":
+                    other.color = "blue"
+                    other.state = "recovered"
+            elif other.state == "recovered":
+                if self.state == "infected":
+                    self.color == "blue"
+                    self.state == "recovered"
 
     def checkWalls(self):
         sides = {"top": False, "bottom": False, "left": False, "right": False}
@@ -196,7 +207,7 @@ class Simulation:
 
     def populateSim(self, pos=None):
         for _ in range(self.population_count):
-            self.addPerson()
+            self.addPerson(state="susceptible")
 
     def addPerson(self, **kwargs):
         width = kwargs.get("width", config["sprite"]["width"])
@@ -236,6 +247,7 @@ class Simulation:
                     if collided:
                         dx, dy = self.population[i].getDxDy()
                         self.population[j].setDxDy(dx * -1, dy * -1)
+                        self.population[i].checkInfect(self.population[j])
 
         self.sprite_group.draw(self.screen)
 
@@ -264,7 +276,7 @@ if __name__ == '__main__':
     display_surface = pygame.display.set_mode((X, Y )) 
     
     # set the pygame window name 
-    pygame.display.set_caption('Show Text') 
+    pygame.display.set_caption('CODEvid-19 Sim') 
     
     # create a font object. 
     # 1st parameter is the font file 
@@ -292,9 +304,6 @@ if __name__ == '__main__':
 
     # Run until the user asks to quit
     running = True
-
-    for person in sim.population:
-            print(person.state)
 
 
     #___ GAME LOOP ____________________________________________________________
@@ -327,7 +336,7 @@ if __name__ == '__main__':
             if event.type == pygame.QUIT:
                 running = False
 
-            # handle MOUSEBUTTONUP
+            # handle the mouse interaction**
             if event.type == pygame.MOUSEBUTTONUP:
                 if event.button == 1:               # LeftMB
                     pos = pygame.mouse.get_pos()    
